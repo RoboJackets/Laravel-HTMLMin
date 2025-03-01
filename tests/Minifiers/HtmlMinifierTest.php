@@ -25,7 +25,7 @@ use Mockery;
  */
 class HtmlMinifierTest extends AbstractTestCase
 {
-    public function testRenderQuick()
+    public function testRenderQuick(): void
     {
         $html = $this->getHtmlMinifier();
 
@@ -34,7 +34,7 @@ class HtmlMinifierTest extends AbstractTestCase
         $this->assertSame('test', $return);
     }
 
-    public function testRenderFull()
+    public function testRenderFull(): void
     {
         $html = $this->getHtmlMinifier();
         $text = 'test<style>font-size: 12pt;</style><script>alert("Hello");</script>';

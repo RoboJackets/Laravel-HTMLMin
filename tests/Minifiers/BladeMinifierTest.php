@@ -23,7 +23,7 @@ use HTMLMin\HTMLMin\Minifiers\BladeMinifier;
  */
 class BladeMinifierTest extends AbstractTestCase
 {
-    public function testRenderEnabled()
+    public function testRenderEnabled(): void
     {
         $blade = $this->getBladeMinifier();
 
@@ -36,7 +36,7 @@ class BladeMinifierTest extends AbstractTestCase
         $this->assertSame('test <div></div>', $return);
     }
 
-    public static function tagProvider()
+    public static function tagProvider(): array
     {
         return [
             ['textarea'],
@@ -46,7 +46,7 @@ class BladeMinifierTest extends AbstractTestCase
     }
 
     #[DataProvider('tagProvider')]
-    public function testRenderHtmlDisabled($tag)
+    public function testRenderHtmlDisabled($tag): void
     {
         $blade = $this->getBladeMinifier();
 
@@ -55,7 +55,7 @@ class BladeMinifierTest extends AbstractTestCase
         $this->assertSame("test    <$tag></$tag>", $return);
     }
 
-    public function testRenderCommentDisabled()
+    public function testRenderCommentDisabled(): void
     {
         $blade = $this->getBladeMinifier();
 
@@ -65,7 +65,7 @@ class BladeMinifierTest extends AbstractTestCase
     }
 
     #[DataProvider('tagProvider')]
-    public function testRenderForced($tag)
+    public function testRenderForced($tag): void
     {
         $blade = $this->getBladeMinifier(true);
 

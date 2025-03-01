@@ -37,7 +37,7 @@ class SkipMinificationTest extends AbstractFunctionalTestCase
         $app->config->set('htmlmin.blade', true);
     }
 
-    public function testNewSkipHMTL()
+    public function testNewSkipHMTL(): void
     {
         $this->app->view->addNamespace('stubs', realpath(__DIR__.'/stubs'));
 
@@ -48,7 +48,7 @@ class SkipMinificationTest extends AbstractFunctionalTestCase
         $this->assertSameIgnoreLineEndings($expected, $actual);
     }
 
-    public function testMarkDown()
+    public function testMarkDown(): void
     {
         $this->app->view->addNamespace('stubs', realpath(__DIR__.'/stubs'));
 

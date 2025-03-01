@@ -35,7 +35,7 @@ class BladeEnabledTest extends AbstractFunctionalTestCase
         $app->config->set('htmlmin.blade', true);
     }
 
-    public function testNewSetup()
+    public function testNewSetup(): void
     {
         $this->app->view->addNamespace('stubs', realpath(__DIR__.'/stubs'));
 

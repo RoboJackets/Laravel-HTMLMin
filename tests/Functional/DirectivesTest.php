@@ -20,7 +20,7 @@ class DirectivesTest extends AbstractFunctionalTestCase
         return [TestDirectivesProvider::class];
     }
 
-    public function testUseDirectives()
+    public function testUseDirectives(): void
     {
         /** @var MinifyCompiler $minifyCompiler */
         $minifyCompiler = $this->app->make('view')

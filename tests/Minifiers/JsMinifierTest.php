@@ -22,7 +22,7 @@ use HTMLMin\HTMLMin\Minifiers\JsMinifier;
  */
 class JsMinifierTest extends AbstractTestCase
 {
-    public function testRender()
+    public function testRender(): void
     {
         $js = $this->getJsMinifier();
 

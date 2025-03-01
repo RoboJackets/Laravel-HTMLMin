@@ -29,32 +29,32 @@ class ServiceProviderTest extends AbstractTestCase
 {
     use ServiceProviderTrait;
 
-    public function testCssMinifierIsInjectable()
+    public function testCssMinifierIsInjectable(): void
     {
         $this->assertIsInjectable(CssMinifier::class);
     }
 
-    public function testJsMinifierIsInjectable()
+    public function testJsMinifierIsInjectable(): void
     {
         $this->assertIsInjectable(JsMinifier::class);
     }
 
-    public function testHtmlMinifierIsInjectable()
+    public function testHtmlMinifierIsInjectable(): void
     {
         $this->assertIsInjectable(HtmlMinifier::class);
     }
 
-    public function testBladeMinifierIsInjectable()
+    public function testBladeMinifierIsInjectable(): void
     {
         $this->assertIsInjectable(BladeMinifier::class);
     }
 
-    public function testCompilerIsInjectable()
+    public function testCompilerIsInjectable(): void
     {
         $this->assertIsInjectable(MinifyCompiler::class);
     }
 
-    public function testHTMLMinIsInjectable()
+    public function testHTMLMinIsInjectable(): void
     {
         $this->assertIsInjectable(HTMLMin::class);
     }

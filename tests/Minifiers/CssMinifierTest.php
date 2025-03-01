@@ -22,7 +22,7 @@ use HTMLMin\HTMLMin\Minifiers\CssMinifier;
  */
 class CssMinifierTest extends AbstractTestCase
 {
-    public function testRender()
+    public function testRender(): void
     {
         $css = $this->getCssMinifier();
 

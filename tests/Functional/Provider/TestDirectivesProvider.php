@@ -7,7 +7,7 @@ use Illuminate\View\Compilers\BladeCompiler;
 
 class TestDirectivesProvider extends ServiceProvider
 {
-    public static function testDirective()
+    public static function testDirective(): void
     {
         return 'test content';
     }

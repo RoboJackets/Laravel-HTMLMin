@@ -38,7 +38,7 @@ class MiddlewareTest extends AbstractFunctionalTestCase
         $app->config->set('htmlmin.live', true);
     }
 
-    public function testNewSetup()
+    public function testNewSetup(): void
     {
         $this->app->view->addNamespace('stubs', realpath(__DIR__.'/stubs'));
 
@@ -53,7 +53,7 @@ class MiddlewareTest extends AbstractFunctionalTestCase
         $this->assertSameIgnoreLineEndings($expected, $actual);
     }
 
-    public function testRedirect()
+    public function testRedirect(): void
     {
         $this->app->router->get('htmlmin-test-route', ['middleware' => MinifyMiddleware::class, function () {
             return Redirect::to('foo');
@@ -64,7 +64,7 @@ class MiddlewareTest extends AbstractFunctionalTestCase
         $this->assertSame($this->app->url->to('foo'), $response->headers->get('Location'));
     }
 
-    public function testJson()
+    public function testJson(): void
     {
         $this->app->router->get('htmlmin-test-route', ['middleware' => MinifyMiddleware::class, function () {
             return Response::json(['foo' => 'bar', ['baz']], 200, [], JSON_PRETTY_PRINT);

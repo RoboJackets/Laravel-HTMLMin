@@ -19,7 +19,7 @@ class ComponentsTest extends AbstractFunctionalTestCase
         return [TestComponentsProvider::class];
     }
 
-    public function testUseComponents()
+    public function testUseComponents(): void
     {
         if (version_compare($this->app->version(), '7.0', '<')) {
             $this->markTestSkipped('Class components were released in Laravel version 7.0.0');

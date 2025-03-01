@@ -28,7 +28,7 @@ use Mockery;
  */
 class HTMLMinTest extends AbstractTestBenchTestCase
 {
-    public static function methodProvider()
+    public static function methodProvider(): array
     {
         return [
             ['blade', 'getBladeMinifier'],
@@ -39,7 +39,7 @@ class HTMLMinTest extends AbstractTestBenchTestCase
     }
 
     #[DataProvider('methodProvider')]
-    public function testMethods($method, $class)
+    public function testMethods($method, $class): void
     {
         $htmlmin = $this->getHTMLMin();
 
