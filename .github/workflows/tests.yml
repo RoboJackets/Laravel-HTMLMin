@@ -1,5 +1,5 @@
 name: HTMLMinTests
-on: [push, pull_request]
+on: [push]
 jobs:
   htmlmin:
     name: PHP ${{ matrix.php-versions }}
