@@ -19,7 +19,7 @@ use Illuminate\Contracts\Foundation\Application;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class SkipMinificationTest extends AbstractFunctionalTestCase
+final class SkipMinificationTest extends AbstractFunctionalTestCase
 {
     /**
      * Setup the application environment.
@@ -27,17 +27,15 @@ class SkipMinificationTest extends AbstractFunctionalTestCase
      * Ensure that blade is on.
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return void
      */
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         parent::getEnvironmentSetUp($app);
 
         $app->config->set('htmlmin.blade', true);
     }
 
-    public function testNewSkipHMTL()
+    public function testNewSkipHMTL(): void
     {
         $this->app->view->addNamespace('stubs', realpath(__DIR__.'/stubs'));
 
@@ -48,7 +46,7 @@ class SkipMinificationTest extends AbstractFunctionalTestCase
         $this->assertSameIgnoreLineEndings($expected, $actual);
     }
 
-    public function testMarkDown()
+    public function testMarkDown(): void
     {
         $this->app->view->addNamespace('stubs', realpath(__DIR__.'/stubs'));
 

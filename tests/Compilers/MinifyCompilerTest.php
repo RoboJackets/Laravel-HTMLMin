@@ -23,9 +23,9 @@ use Mockery;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class MinifyCompilerTest extends AbstractTestCase
+final class MinifyCompilerTest extends AbstractTestCase
 {
-    public function testMinify()
+    public function testMinify(): void
     {
         $compiler = $this->getCompiler();
 
@@ -37,7 +37,7 @@ class MinifyCompilerTest extends AbstractTestCase
         $this->assertSame('abc', $return);
     }
 
-    public function testMinifyIgnored()
+    public function testMinifyIgnored(): void
     {
         $blade = Mockery::mock(BladeMinifier::class);
         $files = Mockery::mock(Filesystem::class);
@@ -57,7 +57,7 @@ class MinifyCompilerTest extends AbstractTestCase
         $this->assertSame($html, $return);
     }
 
-    public function testCompilers()
+    public function testCompilers(): void
     {
         $compiler = $this->getCompiler();
 

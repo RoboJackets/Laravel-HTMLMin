@@ -19,23 +19,21 @@ use Illuminate\Contracts\Foundation\Application;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class BladeEnabledTest extends AbstractFunctionalTestCase
+final class BladeEnabledTest extends AbstractFunctionalTestCase
 {
     /**
      * Setup the application environment.
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return void
      */
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         parent::getEnvironmentSetUp($app);
 
         $app->config->set('htmlmin.blade', true);
     }
 
-    public function testNewSetup()
+    public function testNewSetup(): void
     {
         $this->app->view->addNamespace('stubs', realpath(__DIR__.'/stubs'));
 

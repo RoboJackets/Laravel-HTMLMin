@@ -12,6 +12,7 @@
 
 namespace HTMLMin\Tests\HTMLMin;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use HTMLMin\HTMLMin\HTMLMin;
 use HTMLMin\HTMLMin\Minifiers\BladeMinifier;
@@ -25,9 +26,9 @@ use Mockery;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class HTMLMinTest extends AbstractTestBenchTestCase
+final class HTMLMinTest extends AbstractTestBenchTestCase
 {
-    public function methodProvider()
+    public static function methodProvider(): array
     {
         return [
             ['blade', 'getBladeMinifier'],
@@ -37,10 +38,8 @@ class HTMLMinTest extends AbstractTestBenchTestCase
         ];
     }
 
-    /**
-     * @dataProvider methodProvider
-     */
-    public function testMethods($method, $class)
+    #[DataProvider('methodProvider')]
+    public function testMethods($method, $class): void
     {
         $htmlmin = $this->getHTMLMin();
 

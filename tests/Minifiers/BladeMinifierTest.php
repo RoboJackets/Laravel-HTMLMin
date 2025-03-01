@@ -12,6 +12,7 @@
 
 namespace HTMLMin\Tests\HTMLMin\Minifiers;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use GrahamCampbell\TestBench\AbstractTestCase;
 use HTMLMin\HTMLMin\Minifiers\BladeMinifier;
 
@@ -20,9 +21,9 @@ use HTMLMin\HTMLMin\Minifiers\BladeMinifier;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class BladeMinifierTest extends AbstractTestCase
+final class BladeMinifierTest extends AbstractTestCase
 {
-    public function testRenderEnabled()
+    public function testRenderEnabled(): void
     {
         $blade = $this->getBladeMinifier();
 
@@ -35,7 +36,7 @@ class BladeMinifierTest extends AbstractTestCase
         $this->assertSame('test <div></div>', $return);
     }
 
-    public function tagProvider()
+    public static function tagProvider(): array
     {
         return [
             ['textarea'],
@@ -44,10 +45,8 @@ class BladeMinifierTest extends AbstractTestCase
         ];
     }
 
-    /**
-     * @dataProvider tagProvider
-     */
-    public function testRenderHtmlDisabled($tag)
+    #[DataProvider('tagProvider')]
+    public function testRenderHtmlDisabled($tag): void
     {
         $blade = $this->getBladeMinifier();
 
@@ -56,7 +55,7 @@ class BladeMinifierTest extends AbstractTestCase
         $this->assertSame("test    <$tag></$tag>", $return);
     }
 
-    public function testRenderCommentDisabled()
+    public function testRenderCommentDisabled(): void
     {
         $blade = $this->getBladeMinifier();
 
@@ -65,10 +64,8 @@ class BladeMinifierTest extends AbstractTestCase
         $this->assertSame('test    <?php // foo', $return);
     }
 
-    /**
-     * @dataProvider tagProvider
-     */
-    public function testRenderForced($tag)
+    #[DataProvider('tagProvider')]
+    public function testRenderForced($tag): void
     {
         $blade = $this->getBladeMinifier(true);
 
