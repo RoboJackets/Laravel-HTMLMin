@@ -19,7 +19,7 @@ use Illuminate\Contracts\Foundation\Application;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class BladeEnabledTest extends AbstractFunctionalTestCase
+final class BladeEnabledTest extends AbstractFunctionalTestCase
 {
     /**
      * Setup the application environment.

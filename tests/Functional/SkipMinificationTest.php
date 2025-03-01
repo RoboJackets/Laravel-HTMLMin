@@ -19,7 +19,7 @@ use Illuminate\Contracts\Foundation\Application;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class SkipMinificationTest extends AbstractFunctionalTestCase
+final class SkipMinificationTest extends AbstractFunctionalTestCase
 {
     /**
      * Setup the application environment.

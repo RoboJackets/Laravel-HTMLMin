@@ -5,7 +5,7 @@ namespace HTMLMin\Tests\HTMLMin\Functional;
 use HTMLMin\HTMLMin\Compilers\MinifyCompiler;
 use HTMLMin\Tests\HTMLMin\Functional\Provider\TestComponentsProvider;
 
-class ComponentsTest extends AbstractFunctionalTestCase
+final class ComponentsTest extends AbstractFunctionalTestCase
 {
     /**
      * Get the required service providers.

@@ -21,7 +21,7 @@ use HTMLMin\HTMLMin\Minifiers\BladeMinifier;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class BladeMinifierTest extends AbstractTestCase
+final class BladeMinifierTest extends AbstractTestCase
 {
     public function testRenderEnabled(): void
     {

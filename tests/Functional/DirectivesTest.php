@@ -6,7 +6,7 @@ use HTMLMin\HTMLMin\Compilers\MinifyCompiler;
 use HTMLMin\Tests\HTMLMin\Functional\Provider\TestDirectivesProvider;
 use HTMLMin\Tests\HTMLMin\Mock\MinifyCompilerMock;
 
-class DirectivesTest extends AbstractFunctionalTestCase
+final class DirectivesTest extends AbstractFunctionalTestCase
 {
     /**
      * Get the required service providers.

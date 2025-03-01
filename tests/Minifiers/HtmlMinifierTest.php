@@ -23,7 +23,7 @@ use Mockery;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class HtmlMinifierTest extends AbstractTestCase
+final class HtmlMinifierTest extends AbstractTestCase
 {
     public function testRenderQuick(): void
     {

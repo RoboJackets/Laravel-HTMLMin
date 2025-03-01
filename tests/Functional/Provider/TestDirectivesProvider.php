@@ -5,7 +5,7 @@ namespace HTMLMin\Tests\HTMLMin\Functional\Provider;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 
-class TestDirectivesProvider extends ServiceProvider
+final class TestDirectivesProvider extends ServiceProvider
 {
     public static function testDirective(): void
     {

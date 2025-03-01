@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Response;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class MiddlewareTest extends AbstractFunctionalTestCase
+final class MiddlewareTest extends AbstractFunctionalTestCase
 {
     /**
      * Setup the application environment.

@@ -20,7 +20,7 @@ use HTMLMin\HTMLMin\Minifiers\CssMinifier;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CssMinifierTest extends AbstractTestCase
+final class CssMinifierTest extends AbstractTestCase
 {
     public function testRender(): void
     {

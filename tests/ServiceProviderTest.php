@@ -25,7 +25,7 @@ use HTMLMin\HTMLMin\Minifiers\JsMinifier;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class ServiceProviderTest extends AbstractTestCase
+final class ServiceProviderTest extends AbstractTestCase
 {
     use ServiceProviderTrait;
 

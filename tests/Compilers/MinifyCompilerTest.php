@@ -23,7 +23,7 @@ use Mockery;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class MinifyCompilerTest extends AbstractTestCase
+final class MinifyCompilerTest extends AbstractTestCase
 {
     public function testMinify(): void
     {

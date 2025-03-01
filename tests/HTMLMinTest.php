@@ -26,7 +26,7 @@ use Mockery;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class HTMLMinTest extends AbstractTestBenchTestCase
+final class HTMLMinTest extends AbstractTestBenchTestCase
 {
     public static function methodProvider(): array
     {
