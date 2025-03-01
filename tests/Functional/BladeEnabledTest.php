@@ -25,10 +25,8 @@ final class BladeEnabledTest extends AbstractFunctionalTestCase
      * Setup the application environment.
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return void
      */
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         parent::getEnvironmentSetUp($app);
 

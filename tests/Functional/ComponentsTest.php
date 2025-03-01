@@ -10,11 +10,9 @@ final class ComponentsTest extends AbstractFunctionalTestCase
     /**
      * Get the required service providers.
      *
-     * @param \Illuminate\Contracts\Foundation\Application $app
-     *
      * @return string[]
      */
-    protected function getRequiredServiceProviders($app)
+    protected static function getRequiredServiceProviders(): array
     {
         return [TestComponentsProvider::class];
     }

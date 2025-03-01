@@ -27,10 +27,8 @@ final class SkipMinificationTest extends AbstractFunctionalTestCase
      * Ensure that blade is on.
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return void
      */
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         parent::getEnvironmentSetUp($app);
 
