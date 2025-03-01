@@ -36,7 +36,7 @@ class BladeMinifierTest extends AbstractTestCase
         $this->assertSame('test <div></div>', $return);
     }
 
-    public function tagProvider()
+    public static function tagProvider()
     {
         return [
             ['textarea'],

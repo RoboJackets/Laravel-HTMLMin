@@ -28,7 +28,7 @@ use Mockery;
  */
 class HTMLMinTest extends AbstractTestBenchTestCase
 {
-    public function methodProvider()
+    public static function methodProvider()
     {
         return [
             ['blade', 'getBladeMinifier'],
