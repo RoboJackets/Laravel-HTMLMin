@@ -31,7 +31,7 @@ class HTMLMinTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeAccessor()
+    protected static function getFacadeAccessor()
     {
         return 'htmlmin';
     }
