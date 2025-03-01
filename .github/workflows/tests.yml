@@ -33,4 +33,3 @@ jobs:
       env:
         PHP_VERSION: ${{ matrix.php-versions }}
       run: vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-      continue-on-error: true
