@@ -12,6 +12,7 @@
 
 namespace HTMLMin\Tests\HTMLMin;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use HTMLMin\HTMLMin\HTMLMin;
 use HTMLMin\HTMLMin\Minifiers\BladeMinifier;
@@ -37,9 +38,7 @@ class HTMLMinTest extends AbstractTestBenchTestCase
         ];
     }
 
-    /**
-     * @dataProvider methodProvider
-     */
+    #[DataProvider('methodProvider')]
     public function testMethods($method, $class)
     {
         $htmlmin = $this->getHTMLMin();

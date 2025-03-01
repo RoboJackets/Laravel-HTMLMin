@@ -12,6 +12,7 @@
 
 namespace HTMLMin\Tests\HTMLMin\Minifiers;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use GrahamCampbell\TestBench\AbstractTestCase;
 use HTMLMin\HTMLMin\Minifiers\BladeMinifier;
 
@@ -44,9 +45,7 @@ class BladeMinifierTest extends AbstractTestCase
         ];
     }
 
-    /**
-     * @dataProvider tagProvider
-     */
+    #[DataProvider('tagProvider')]
     public function testRenderHtmlDisabled($tag)
     {
         $blade = $this->getBladeMinifier();
@@ -65,9 +64,7 @@ class BladeMinifierTest extends AbstractTestCase
         $this->assertSame('test    <?php // foo', $return);
     }
 
-    /**
-     * @dataProvider tagProvider
-     */
+    #[DataProvider('tagProvider')]
     public function testRenderForced($tag)
     {
         $blade = $this->getBladeMinifier(true);
